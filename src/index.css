@@ -1,0 +1,99 @@
+@import "tailwindcss";
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+body.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #f1f1f1;
+}
+
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@layer components {
+  .logo-text {
+    width: 200px;
+  }
+
+ 
+  .item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  
+}
+
+.item:hover {
+  background-color: #f2f2f2;
+  
+}
+.item svg {
+  @apply text-[22px];
+}
+
+.icon {
+  font-size: 22px;
+}
+.dp{
+  height:25px;
+  overflow: hidden;
+  border: 2;
+  border-color: crimson;
+
+
+}
+.post{
+  width: 300px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.bottom{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+.suggestion{
+  width: 80%;
+  
+
+}
+.suggestion .dp{
+  margin-top: 0x !important
+}
+.button{
+  cursor: pointer;
+  border-radius: 2px;
+  border-color: deepskyblue;
+  color: #30a4cb;
+  
+}
+.button.hover{
+  background-color: #f2f2f2;
+}
+.story{
+  cursor: pointer;
+}
+.arrow{
+  cursor: pointer;
+  
+}
+.profile{
+  cursor:pointer;
+  border-color: darkmagenta;
+  
+}
+}
